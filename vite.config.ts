@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // Set base for GitHub Pages (repo name)
-      base: '/Bridge-AI/',
+      // Base path for GitHub Pages (defaults to bridgeai-job-matching, overridable via BASE_PATH)
+      base: process.env.BASE_PATH || '/bridgeai-job-matching/',
       server: {
         port: 3000,
         host: '0.0.0.0',
